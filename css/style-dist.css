@@ -1186,7 +1186,7 @@ th {
   position: relative;
   top: 350px;
   left: 380px;
-  background-image: url(/images/hack.png);
+  background-image: url(../images/hack.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1200,7 +1200,7 @@ th {
   position: relative;
   top: -40px;
   left: 70px;
-  background-image: url(/images/code.png);
+  background-image: url(../images/code.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
@@ -1214,7 +1214,7 @@ th {
   position: relative;
   top: 100px;
   left: 60px;
-  background-image: url(/images/design.png);
+  background-image: url(../images/design.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -1232,7 +1232,7 @@ th {
   position: absolute;
   bottom: -100px;
   left: 90px;
-  background-image: url(/images/blue-guy.png);
+  background-image: url(../images/blue-guy.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -1245,7 +1245,7 @@ th {
   position: absolute;
   top: 0px;
   left: 0px;
-  background-image: url(/images/spotlight.png);
+  background-image: url(../images/spotlight.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center top;
