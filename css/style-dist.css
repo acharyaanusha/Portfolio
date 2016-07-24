@@ -1319,6 +1319,47 @@ th {
   left: 50vw;
 }
 
+.skill-set {
+  margin-top: -8px;
+  padding: 10vh 0vw;
+  background-color: #0071bc;
+  color: white;
+}
+
+.skill-set h3 {
+  margin-bottom: 0px;
+  font-size: 2em;
+}
+
+.skill-set .skill-lockup .skill {
+  margin: 2.5vh 0vw;
+}
+
+.skill-set .skill-lockup .skill .skill-back {
+  background-color: rgba(225, 225, 225, 0.9);
+  height: 30px;
+}
+
+.skill-set .skill-lockup .skill .skill-back .skill-fill {
+  background-color: rgba(41, 171, 226, 0.8);
+  height: 30px;
+  width: 70%;
+}
+
+.projects-showcase {
+  margin-top: -20px;
+  padding-top: 10vh;
+  height: 80vh;
+  background-color: #29abe2;
+  color: white;
+}
+
+.projects-showcase .project-thumbnail {
+  margin-top: 5vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 200px;
+}
+
 body {
   background-color: #f7f7f7;
 }
