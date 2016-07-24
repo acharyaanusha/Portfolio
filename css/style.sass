@@ -1,3 +1,32 @@
 @import "tools/skeleton"
 @import "tools/normalizes"
-@import "tools/bouron/_bourbon"
+@import "tools/bourbon/bourbon"
+@import "modules/header"
+@import "modules/hero-section"
+
+body
+  background-color: #f7f7f7
+
+::-webkit-scrollbar 
+    width: 0px
+    /* remove scrollbar space */
+    background: transparent
+    /* optional: just make scrollbar invisible */
+
+::-webkit-scrollbar-thumb 
+    background: #FFF
+
+
+.home-wrap
+  display: flex
+  min-height: 100vh
+
+#header-container
+  width: inherit
+
+#content-container
+  width: 100%
+
+@media (max-width: 775px)
+  .home-wrap
+    flex-direction: column
