@@ -1,8 +1,5 @@
 .birdbox
   position: relative
-  display: flex
-  flex-direction: row
-  justify-content: space-around
   height: 90vh
   color: white
   overflow: hidden
@@ -14,78 +11,85 @@
     attachment: fixed
     blend-mode: multiply
 
-  .text-container
+  .hack
+    display: block
+    height: 100px
+    width: 200px
+    z-index: 4
+    position: relative
+    top: 40px
+    left: 680px
+    background:
+      image: url(../images/hack.png)
+      size: contain
+      repeat: no-repeat
+      position: center
+
+  .code
+    display: block
+    height:200px
     width: 100%
-    height: 100%
-    .hack
-      display: block
-      height: 100px
-      width: 200px
-      z-index: 4
-      position: relative
-      top: 350px
-      left: 380px
-      background:
-        image: url(../images/hack.png)
-        size: contain
-        repeat: no-repeat
-        position: center
+    z-index: 1
+    position: relative
+    top: 180px
+    left: 210px
+    background:
+      image: url(../images/code.png)
+      size: contain
+      repeat: no-repeat
+      position: left center
 
-    .code
-      display: block
-      height:200px
-      width: 100%
-      z-index: 5
-      position: relative
-      top: -40px
-      left: 70px
-      background:
-        image: url(../images/code.png)
-        size: contain
-        repeat: no-repeat
-        position: left center
+  .design
+    display: block
+    height:200px
+    z-index: 3
+    width: 80%
+    position: relative
+    top: 0px
+    left: 0px
+    background:
+      image: url(../images/design.png)
+      size: contain
+      repeat: no-repeat
+      position: right bottom
 
-    .design
-      display: block
-      height:200px
-      z-index: 6
-      width: 80%
-      position: relative
-      top: 100px
-      left: 60px
-      background:
-        image: url(../images/design.png)
-        size: contain
-        repeat: no-repeat
-        position: right bottom
+  .boy
+    display: block
+    height: 800px
+    width: 100%
+    z-index: 4
+    position: absolute
+    bottom: -300px
+    transition: all .01s ease
+    background:
+      image: url(../images/blue-guy.png)
+      size: contain
+      repeat: no-repeat
+      position: center bottom
 
-  .boy-container
-    height: 100%
-    min-width: 400px
+  .spotlight
+    display: block
+    height: 200%
+    width: 100%
+    position: absolute
+    top: -50%
+    left: 0px
+    background:
+      image: url(../images/spotlight.png)
+      size: contain
+      repeat: no-repeat
+      position: center top
 
-    .boy
-      display: block
-      height: 600px
-      width: 300px
-      position: absolute
-      bottom: -100px
-      left: 90px
-      background:
-        image: url(../images/blue-guy.png)
-        size: contain
-        repeat: no-repeat
-        position: center bottom
-
-
-    .spotlight
-      display: block
-      height: 100%
-      width: 500px
-      position: absolute
-      top: 0px
-      left: 0px
-      background:
-        image: url(../images/spotlight.png)
-        size: contain
-        repeat: no-repeat
-        position: center top
+  .innovation
+    display: block
+    height:200px
+    z-index: 6
+    width: 100%
+    position: relative
+    top: -160px
+    left: -200px
+    background:
+      image: url(../images/innovation.png)
+      size: contain
+      repeat: no-repeat
+      position: center bottom

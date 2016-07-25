@@ -12,7 +12,7 @@
     position: relative
     transform: translateX(-1000px)
     z-index: 1
-    transition: all .6s ease
+    transition: all .6s cubic-bezier(0, 0, 0.71, 1.33)
 
     &.in-position
       transform: translateX(0px)
@@ -30,7 +30,7 @@
       height: 300px
       width: 300px
       border-radius: 50%
-      transition: all .6s ease
+      transition: all .6s cubic-bezier(0, 0, 0.71, 1.33)
       background:
         image: url('../images/blue-guy.png')
         color: rgb(22, 52, 94)
@@ -52,7 +52,7 @@
     left: 22vw
     margin-left: 0px
     display: inline-block
-    transition: all .6s ease
+    transition: all .6s cubic-bezier(0, 0, 0.71, 1.33)
     padding-top: 10vh
 
     &.in-position
