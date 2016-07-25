@@ -3,26 +3,39 @@ var wScroll = 0;
 $(window).scroll(function(){
 
   wScroll = $(this).scrollTop();
-  console.log(wScroll);
-
+//  console.log(1+wScroll/10000);
+  console.log(1 - (wScroll/300) + '%');
   $('.boy').css({
-    'transform' : 'translate(0px , ' + wScroll/6 +'%)'
+    'transform' : 'translate(0px , ' + 2*wScroll +'%)',
+    'transform' : 'scale('+(1 + wScroll/2000) +')',
+    'bottom' : (-300 - wScroll)
+
   });
 
   $('.spotlight').css({
-    'transform' : 'translate(0px , ' + wScroll/8 +'%)'
+    'transform' : 'translate(0px , ' + wScroll/8 +'%)',
+    'transform' : 'scale('+(1 + wScroll/2000) +')',
+    'bottom' : (- wScroll)
   });
 
   $('.hack').css({
-    'transform' : 'translate(0px , ' + wScroll/6  +'%)'
+    'transform' : 'translate(0px , ' + wScroll/2  +'%)',
+    'opactiy' : 1 - (wScroll/600)
   });
 
   $('.code').css({
-    'transform' : 'translate(0px , ' + wScroll /4 +'%)'
+    'transform' : 'translate(0px , ' + wScroll /4 +'%)',
+    'opactiy' : 1 - (wScroll/600)
   });
 
   $('.design').css({
     'transform' : 'translate(0px , ' + wScroll /10 +'%)',
+    'opactiy' : 1 - (wScroll/600)
+  });
+
+  $('.innovation').css({
+    'transform' : 'translate(0px , ' + wScroll /10 +'%)',
+    'opactiy' : 1 - (wScroll/600)
   });
 
   if (wScroll > $('.intro').offset().top - 200)  {
@@ -30,36 +43,27 @@ $(window).scroll(function(){
   }
 
   if (wScroll > $('.skill-set').offset().top - 200)  {
-    $('.html').css({
-      'width' : '70%'
+
+    $('.skill-back').each(function(i){
+
+      setTimeout(function () {
+        $('.skill-back').eq(i).css({
+          'width' : '100%'
+        });
+      }, 100 * i);
+
     });
 
-    $('.css').css({
-      'width' : '80%'
-    });
+    $('.skill-fill').each(function(i){
 
-    $('.js').css({
-      'width' : '65%'
-    });
+      var width  = [ 70, 40, 50, 60, 57 , 78 , 64, 88 ];
 
-    $('.jquery').css({
-      'width' : '60%'
-    });
+      setTimeout(function () {
+        $('.skill-fill').eq(i).css({
+          'width' : width[i] + '%'
+        });
+      }, 100 * (i + 1));
 
-    $('.angular').css({
-      'width' : '80%'
-    });
-
-    $('.android').css({
-      'width' : '65%'
-    });
-
-    $('.graphic').css({
-      'width' : '60%'
-    });
-
-    $('.skill-back').css({
-      'width' : '100%'
     });
 
   }
