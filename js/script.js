@@ -44,7 +44,7 @@ $(window).scroll(function(){
     $('.profile-pic,.intro-right,.intro-left').addClass('in-position');
   }
 
-  if (wScroll > $('.skill-set').offset().top - 200)  {
+  if (wScroll > $('.skill-set').offset().top - 500)  {
 
     $('.skill-back').each(function(i){
 
