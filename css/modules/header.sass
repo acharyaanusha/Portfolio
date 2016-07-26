@@ -25,7 +25,7 @@
 
       .logo
         +hide-text
-        max-width: 155px
+        width: 155px
         background:
           image: url(../images/logo-ub.svg)
           repeat: no-repeat
@@ -137,7 +137,7 @@
     header
       width: auto
       height: auto
-      padding: 20px 0
+      padding: 0
 
       .header-position
         width: auto
@@ -148,6 +148,10 @@
         flex-direction: row
         align-items: center
 
+        h1.logo
+          width: 55px
+          margin-left: 10vw
+
       .site-nav,
       .email-link
         display: none
@@ -157,7 +161,42 @@
 
       .mobile-nav-toggle
         display: flex
+        width: 45px
 
     .mobile-nav.is-open
       display: block
       transform: translateY(0%)
+
+    .birdbox
+      .boy
+        height: 110vh
+      .innovation
+        height: 100px
+        left: -10vw
+      .design
+        height: 100px
+        top: 20vh
+        left: 20vw
+      .code
+        height: 100px
+        top: 70vh
+        left:40vw
+        z-index: 10
+      .hack
+        height: 100px
+        top: 40vh
+        left: 5vw
+
+    .intro
+      min-height: 100vh
+      height: auto
+      .intro-right
+        padding: 5vh 0
+        left: 5vw
+        width: 90vw
+        p
+          font-size: 4vw
+  .contact-me
+    padding: 5vh!important
+    span
+      font-size: 7vw !important

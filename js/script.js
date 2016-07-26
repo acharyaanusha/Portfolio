@@ -1,10 +1,29 @@
+$(function() {
+  // This will select everything with the class smoothScroll
+  // This should prevent problems with carousel, scrollspy, etc...
+  $('.site-nav a').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000); // The number here represents the speed of the scroll in milliseconds
+        return false;
+      }
+    }
+  });
+});
+
+// Change the speed to whatever you want
+// Personally i think 1000 is too much
+// Try 800 or below, it seems not too much but it will make a difference
+
 var wScroll = 0;
 
 $(window).scroll(function(){
 
   wScroll = $(this).scrollTop();
-//  console.log(1+wScroll/10000);
-  console.log(1 - (wScroll/300) + '%');
   $('.boy').css({
     'transform' : 'translate(0px , ' + 2*wScroll +'%)',
     'transform' : 'scale('+(1 + wScroll/2000) +')',
@@ -40,8 +59,10 @@ $(window).scroll(function(){
       'opacity': ((height - scrollTop) / height)
   });
 
-  if (wScroll > $('.intro').offset().top - 200)  {
-    $('.profile-pic,.intro-right,.intro-left').addClass('in-position');
+  if($(window).width() >= 775){
+    if (wScroll > $('.intro').offset().top - 200)  {
+      $('.profile-pic,.intro-right,.intro-left').addClass('in-position');
+    }
   }
 
   if (wScroll > $('.skill-set').offset().top - 500)  {
@@ -69,6 +90,42 @@ $(window).scroll(function(){
     });
 
   }
+
+  if (wScroll > $('.projects-showcase').offset().top - 300 )  {
+
+    $('.learned').each(function(i){
+
+      setTimeout(function () {
+        $(".learned").eq(i).animate({'opacity': '1'});
+      }, 600 * i);
+
+    });
+
+    $('.grid li').each(function(i){
+
+      setTimeout(function () {
+        $('.grid li').eq(i).css({
+          'animation-name' : 'project-tile-entrance'
+        });
+      }, 200 * i);
+
+    });
+
+    $('.code-tile-col2 a').each(function(i){
+
+      setTimeout(function () {
+        $('.code-tile-col2 a').eq(i).css({
+          'transform' : 'translateX(0px)'
+        });
+      }, 200 * i);
+
+    });
+
+      $('.projects-showcase h3').css({
+        'opacity' : '1'
+      });
+  }
+
 
 
 });
