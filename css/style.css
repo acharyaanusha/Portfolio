@@ -26,6 +26,7 @@
 */
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,700);
 .container {
   position: relative;
   width: 100%;
@@ -57,7 +58,7 @@
   }
   .column,
   .columns {
-    margin-left: 4%;
+    margin-left: 1%;
   }
   .column:first-child,
   .columns:first-child {
@@ -74,7 +75,7 @@
     width: 22%;
   }
   .four.columns {
-    width: 30.6666666667%;
+    width: 33.0666666667%;
   }
   .five.columns {
     width: 39.3333333333%;
@@ -952,12 +953,11 @@ th {
 }
 
 .home-wrap header {
-  width: 175px;
+  width: 155px;
   height: 100%;
   background: #fff;
   padding: 30px 0;
   z-index: 9;
-  box-shadow: 5px 0px 10px 2px #8a8a8a;
 }
 
 .home-wrap header .header-position {
@@ -965,7 +965,7 @@ th {
   top: 30px;
   left: 0;
   bottom: 30px;
-  width: 175px;
+  width: 155px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -984,7 +984,7 @@ th {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
-  max-width: 175px;
+  max-width: 155px;
   background-image: url(../images/logo-ub.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1233,13 +1233,15 @@ th {
   background-color: #2e3192;
   color: white;
   padding: 0px;
+  min-height: 70vh;
+  display: block;
 }
 
 .intro .intro-left {
   margin-right: 0px;
   padding-top: 15vh;
   display: inline-block;
-  min-height: 533px;
+  min-height: 70vh;
   background: #3fa9f5;
   position: relative;
   transform: translateX(-1000px);
@@ -1277,6 +1279,7 @@ th {
 }
 
 .intro .intro-right {
+  min-height: 70vh;
   position: absolute;
   width: 70vw;
   left: 22vw;
@@ -1333,7 +1336,8 @@ th {
 .projects-showcase {
   margin-top: -20px;
   padding-top: 10vh;
-  height: 80vh;
+  padding-bottom: 15vh;
+  min-height: 80vh;
   background-color: #29abe2;
   color: white;
 }
@@ -1344,10 +1348,19 @@ th {
   height: 200px;
 }
 
+.projects-showcase h3 {
+  display: block;
+  max-width: 80%;
+  text-align: left;
+  padding-left: 0.5em;
+  color: white;
+  border-bottom: white 1px solid;
+}
+
 .contact-me {
   background-color: #2e3192;
   color: white;
-  padding: 5vh 0em;
+  padding: 13vh 0em;
   margin-bottom: -10vh;
 }
 
@@ -1355,6 +1368,181 @@ th {
   display: block;
   text-align: center;
   font-size: 5vw;
+}
+
+.grid {
+  max-width: 1300px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.grid li {
+  display: inline-block;
+  width: 500px;
+  margin: 0;
+  text-align: left;
+  margin: 5px 5px;
+  position: relative;
+}
+
+.code-tile-col1 .learned {
+  padding: 4px 2px;
+  margin: 4px 2px;
+  color: #29abe2;
+  background-color: white;
+  border-radius: 4px;
+  font-size: 1.3em;
+  padding-left: 2em;
+  text-align: left;
+}
+
+.code-tile-col2 .see-more {
+  height: 78.5px;
+  padding: 4px 2px;
+  margin: 4px 2px;
+  margin-left: 8%;
+  background-color: black;
+  background-image: black;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+  font-size: 1.3em;
+}
+
+.github {
+  background-image: url(../images/github.png);
+}
+
+.codepen {
+  background-image: url(../images/Codepen.png);
+}
+
+.code-tile-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.code-tile-col1 {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-tile-col2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2em;
+  border-left: white solid 1px;
+}
+
+.grid figure {
+  margin: 0;
+  position: relative;
+}
+
+.grid figure img {
+  max-width: 100%;
+  display: block;
+  position: relative;
+}
+
+.grid figcaption {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  background: #0071bc;
+  color: #ed4e6e;
+}
+
+.grid figcaption h6 {
+  display: block;
+  width: 60%;
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+  color: #fff;
+  line-height: 14px;
+}
+
+.grid figcaption a {
+  text-decoration: none;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  background: #16345e;
+  color: #fff;
+}
+
+/* Individual Caption Styles */
+/* Caption Style 3 */
+.cs-style-3 figure {
+  overflow: hidden;
+}
+
+.cs-style-3 figure img {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+  -webkit-transform: translateY(-50px);
+  -moz-transform: translateY(-50px);
+  -ms-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+  height: 50px;
+  width: 100%;
+  top: auto;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+  -moz-transition: -moz-transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+}
+
+@media screen and (max-width: 31.5em) {
+  .grid {
+    padding: 10px 10px 100px 10px;
+  }
+  .grid li {
+    width: 100%;
+    min-width: 300px;
+  }
 }
 
 body {

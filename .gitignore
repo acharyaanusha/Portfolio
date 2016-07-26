@@ -75,3 +75,4 @@ $RECYCLE.BIN/
 ### Sass ###
 .sass-cache/
 *.css.map
+js/modernizr.custom.js

@@ -9,7 +9,6 @@ $(window).scroll(function(){
     'transform' : 'translate(0px , ' + 2*wScroll +'%)',
     'transform' : 'scale('+(1 + wScroll/2000) +')',
     'bottom' : (-300 - wScroll)
-
   });
 
   $('.spotlight').css({
@@ -20,22 +19,25 @@ $(window).scroll(function(){
 
   $('.hack').css({
     'transform' : 'translate(0px , ' + wScroll/2  +'%)',
-    'opactiy' : 1 - (wScroll/600)
   });
 
   $('.code').css({
     'transform' : 'translate(0px , ' + wScroll /4 +'%)',
-    'opactiy' : 1 - (wScroll/600)
   });
 
   $('.design').css({
     'transform' : 'translate(0px , ' + wScroll /10 +'%)',
-    'opactiy' : 1 - (wScroll/600)
   });
 
   $('.innovation').css({
     'transform' : 'translate(0px , ' + wScroll /10 +'%)',
-    'opactiy' : 1 - (wScroll/600)
+  });
+
+  var scrollTop = $(window).scrollTop();
+  var height = $(window).height()/2;
+
+  $('.hack,.code,.design,.innovation').css({
+      'opacity': ((height - scrollTop) / height)
   });
 
   if (wScroll > $('.intro').offset().top - 200)  {
